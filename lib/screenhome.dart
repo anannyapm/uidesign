@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:uidesign/additionalinfo.dart';
+import 'package:uidesign/catelogpage.dart';
 import 'package:uidesign/managestore.dart';
 import 'package:uidesign/orderpage.dart';
 import 'package:uidesign/payments.dart';
@@ -55,6 +56,14 @@ class ScreenHome extends StatelessWidget {
             child: listWidget(
                 
                 titleWidget: const Text('Screen five - Order Details'),
+                trailingIcon:const Icon(Icons.keyboard_arrow_right)),
+                  ),
+
+                  InkWell(
+            onTap: () {Navigator.of(context).push(MaterialPageRoute(builder: (ctx)=>const CataloguePage()));},
+            child: listWidget(
+                
+                titleWidget: const Text('Screen six - Catelog and Products'),
                 trailingIcon:const Icon(Icons.keyboard_arrow_right)),
                   ),
                 ]),

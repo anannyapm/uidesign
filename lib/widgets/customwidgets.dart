@@ -104,7 +104,8 @@ circularBorder(Widget element, double radius) {
 //orders page text
 
 ordersTextHeadingStyle(String head) {
-  return Text(head, style: TextStyle(fontSize: 16, fontWeight: FontWeight.w700));
+  return Text(head,
+      style: TextStyle(fontSize: 16, fontWeight: FontWeight.w700));
 }
 
 ordersTextTitleStyle(String title) {
@@ -122,4 +123,114 @@ ordersSubTextStyle(String subtext) {
       style: TextStyle(
         fontSize: 16,
       ));
+}
+
+//product widget
+
+productListWidget(
+  String imgURL,
+  String productname,
+  String price,
+) {
+  bool isSwitched = true;
+  return Card(
+    shape: RoundedRectangleBorder(
+      borderRadius: BorderRadius.circular(8.0),
+    ),
+    elevation: 10,
+    child: Padding(
+      padding: const EdgeInsets.all(8.0),
+      child: Column(
+        children: [
+          Row(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Image.asset(
+                imgURL,
+                fit: BoxFit.cover,
+                height: 100, // set your height
+                width: 110, // and width here
+              ),
+              const SizedBox(
+                width: 10,
+              ),
+              Expanded(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      productname,
+                      style: TextStyle(
+                        fontSize: 16,
+                      ),
+                    ),
+                   
+                    Text(
+                      '1 Piece',
+                      style: TextStyle(
+                        fontSize: 15,
+                      ),
+                    ),
+                    
+                    Text(
+                      price,
+                      style: TextStyle(
+                          fontSize: 15,
+                          color: Colors.black,
+                          fontWeight: FontWeight.w500),
+                    ),
+                   
+                    Text(
+                      'in stock',
+                      style: TextStyle(
+                        color: Colors.green,
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+              // const SizedBox(
+              //   width: 10,
+              // ),
+              Column(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  const Icon(
+                    Icons.more_vert,
+                  ),
+                  const SizedBox(
+                    height: 30,
+                  ),
+                  Switch(
+                      value: isSwitched,
+                      onChanged: (value) {
+                        //setState(() {
+                        isSwitched = !isSwitched;
+                      }),
+                  //}),
+                ],
+              )
+            ],
+          ),
+          const Divider(
+            thickness: 1,
+          ),
+          TextButton.icon(
+            onPressed: (() {}),
+            icon: const Icon(
+              Icons.share_outlined,
+              color: Colors.black,
+            ),
+            label: const Text(
+              'Share Product',
+              style: TextStyle(
+                color: Colors.black,
+                fontSize: 16,
+              ),
+            ),
+          )
+        ],
+      ),
+    ),
+  );
 }
