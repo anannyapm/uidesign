@@ -31,7 +31,7 @@ latestBanner(bool status) {
   return const SizedBox();
 }
 
-cardWidget(Widget itemOne, Widget itemTwo,Color color) {
+cardWidget(Widget itemOne, Widget itemTwo, Color color) {
   return Card(
       color: color,
       child: Container(
@@ -63,4 +63,63 @@ actionRowColList(
       )
     ],
   );
+}
+
+//expansion tile widget
+
+expansionSectionWidget(String titletext, String subtext) {
+  return Padding(
+    padding: const EdgeInsets.all(8.0),
+    child: Container(
+      decoration:
+          const BoxDecoration(border: Border(bottom: BorderSide(width: 0.2))),
+      child: ExpansionTile(
+        title: Text(titletext),
+        children: [
+          Container(
+            padding: const EdgeInsets.all(20),
+            width: double.infinity,
+            child: Text(
+              subtext,
+            ),
+          ),
+        ],
+      ),
+    ),
+  );
+}
+
+//image border container
+
+circularBorder(Widget element, double radius) {
+  return Container(
+      width: radius,
+      height: radius,
+      decoration: BoxDecoration(
+          border: Border.all(color: Colors.blue, width: 2),
+          borderRadius: BorderRadius.circular(100)),
+      child: element);
+}
+
+//orders page text
+
+ordersTextHeadingStyle(String head) {
+  return Text(head, style: TextStyle(fontSize: 16, fontWeight: FontWeight.w700));
+}
+
+ordersTextTitleStyle(String title) {
+  return Text(
+    title,
+    style: TextStyle(
+      fontSize: 16,
+      fontWeight: FontWeight.w600,
+    ),
+  );
+}
+
+ordersSubTextStyle(String subtext) {
+  return Text(subtext,
+      style: TextStyle(
+        fontSize: 16,
+      ));
 }
