@@ -10,7 +10,7 @@ class ProductScreen extends StatefulWidget {
 }
 
 class _ProductScreenState extends State<ProductScreen> {
-  List<ProductClass> prodList = [
+  late List<ProductClass> prodList = [
     ProductClass(
         prodName: 'Couch Potato | Women...',
         prodPrice: '₹799',
@@ -54,7 +54,7 @@ class _ProductScreenState extends State<ProductScreen> {
             padding: const EdgeInsets.all(10.0),
             child: ListView.builder(
               shrinkWrap: true,
-              physics: ClampingScrollPhysics(),
+              physics: const ClampingScrollPhysics(),
               itemBuilder: (context, index) {
                 ProductClass item = prodList[index];
               return productListWidget(item.imagePath, item.prodName, item.prodPrice); 

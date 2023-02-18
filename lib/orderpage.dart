@@ -91,7 +91,7 @@ class _ScreenOrderState extends State<ScreenOrder> {
                       decoration: BoxDecoration(
                           border: Border.all(color: Colors.grey, width: 1.5),
                           borderRadius: BorderRadius.circular(5),
-                          image: DecorationImage(
+                          image: const DecorationImage(
                               image: AssetImage(
                                 'assets/images/image2.jpg',
                               ),
@@ -131,7 +131,7 @@ class _ScreenOrderState extends State<ScreenOrder> {
                               width: 30,
                               height: 30,
                               decoration: BoxDecoration(
-                                color: Color.fromARGB(255, 209, 215, 220),
+                                color: const Color.fromARGB(255, 209, 215, 220),
                                 border: Border.all(
                                   color: Colors.blue,
                                 ),
@@ -255,12 +255,12 @@ class _ScreenOrderState extends State<ScreenOrder> {
                     ordersTextHeadingStyle('CUSTOMER DETAILS'),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children:  [
-                        Icon(
+                      children: [
+                        const Icon(
                           Icons.share_outlined,
                           color: Colors.blue,
                         ),
-                        SizedBox(
+                        const SizedBox(
                           width: 10,
                         ),
                         ordersTextHeadingStyle('SHARE'),
@@ -276,9 +276,9 @@ class _ScreenOrderState extends State<ScreenOrder> {
                   children: [
                     Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
-                      children:  [
+                      children: [
                         ordersTextTitleStyle('Deepa'),
-                        SizedBox(
+                        const SizedBox(
                           height: 5,
                         ),
                         ordersSubTextStyle('+91-7829000484'),
@@ -287,16 +287,17 @@ class _ScreenOrderState extends State<ScreenOrder> {
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-                        circularBorder(Icon(
-                            Icons.call_rounded,
-                            color: Colors.blue,
-                            size: 20,
-                          ),30),
-                       
-                        SizedBox(
+                        circularBorder(
+                            const Icon(
+                              Icons.call_rounded,
+                              color: Colors.blue,
+                              size: 20,
+                            ),
+                            30),
+                        const SizedBox(
                           width: 20,
                         ),
-                      Icon(
+                        const Icon(
                           FontAwesome.whatsapp,
                           color: Colors.green,
                           size: 35,
@@ -312,17 +313,16 @@ class _ScreenOrderState extends State<ScreenOrder> {
                   children: [
                     Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
-                      children:  [
+                      children: [
                         ordersTextTitleStyle('Address'),
-                        SizedBox(
+                        const SizedBox(
                           height: 5,
                         ),
                         SizedBox(
                           width: 220,
-                          child: ordersSubTextStyle('D 1101 Chartered Beverly Hills ,Subramanyapuram P.O'),
-                          
+                          child: ordersSubTextStyle(
+                              'D 1101 Chartered Beverly Hills ,Subramanyapuram P.O'),
                         ),
-                        
                       ],
                     ),
                   ],
@@ -336,9 +336,9 @@ class _ScreenOrderState extends State<ScreenOrder> {
                     Expanded(
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
-                        children:  [
+                        children: [
                           ordersTextTitleStyle('City'),
-                          SizedBox(
+                          const SizedBox(
                             height: 5,
                           ),
                           ordersSubTextStyle('Bangalore'),
@@ -348,9 +348,9 @@ class _ScreenOrderState extends State<ScreenOrder> {
                     Expanded(
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
-                        children:  [
+                        children: [
                           ordersTextTitleStyle('Pincode'),
-                          SizedBox(
+                          const SizedBox(
                             height: 5,
                           ),
                           ordersSubTextStyle('560061'),
@@ -367,30 +367,26 @@ class _ScreenOrderState extends State<ScreenOrder> {
                   children: [
                     Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
-                      children:  [
+                      children: [
                         ordersTextTitleStyle('Payment'),
-                        SizedBox(
+                        const SizedBox(
                           height: 5,
                         ),
                         ordersSubTextStyle('Online'),
                       ],
                     ),
                     const Card(
-                      
-                     
                       color: Color.fromARGB(255, 222, 254, 222),
-                      
                       child: SizedBox(
-                        width:70,
+                        width: 70,
                         height: 25,
                         child: Center(
                           child: Text(
                             'PAID',
                             style: TextStyle(
-                              color:Colors.green,
+                                color: Colors.green,
                                 fontSize: 16,
-                                fontWeight: FontWeight.w800
-                            ),
+                                fontWeight: FontWeight.w800),
                           ),
                         ),
                       ),
@@ -410,7 +406,7 @@ class _ScreenOrderState extends State<ScreenOrder> {
                   children: [
                     Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
-                      children:  [
+                      children: [
                         ordersTextHeadingStyle('ADDITIONAL INFORMATION')
                       ],
                     ),
@@ -424,9 +420,9 @@ class _ScreenOrderState extends State<ScreenOrder> {
                   children: [
                     Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
-                      children:  [
+                      children: [
                         ordersTextTitleStyle('State'),
-                        SizedBox(
+                        const SizedBox(
                           height: 5,
                         ),
                         ordersSubTextStyle('Karnataka')
@@ -442,9 +438,9 @@ class _ScreenOrderState extends State<ScreenOrder> {
                   children: [
                     Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
-                      children:  [
+                      children: [
                         ordersTextTitleStyle('Email'),
-                        SizedBox(
+                        const SizedBox(
                           height: 5,
                         ),
                         ordersSubTextStyle('greaniceaqua@gmail.com'),

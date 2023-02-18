@@ -1,4 +1,4 @@
-import 'package:flutter/cupertino.dart';
+
 import 'package:flutter/material.dart';
 import 'package:uidesign/catelog_subscreens/products.dart';
 
@@ -37,7 +37,7 @@ class CataloguePage extends StatelessWidget {
             ),
           ]),
         ),
-        body: TabBarView(
+        body: const TabBarView(
           children: [
             ProductScreen(),
             Catagories(),

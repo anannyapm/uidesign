@@ -5,11 +5,16 @@ class Catagories extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return  const MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: Center(
-        child: Text(
-          'Catagories',
+      home: Scaffold(
+        
+        body: SafeArea(
+          child: Center(
+            child: Text(
+              'Product Catagories',
+            ),
+          ),
         ),
       ),
     );

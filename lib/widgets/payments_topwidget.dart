@@ -18,7 +18,7 @@ topWidget() {
             style: TextStyle(
                 color: Colors.grey, fontWeight: FontWeight.w400, fontSize: 15),
           ),
-          SizedBox(
+          const SizedBox(
             height: 10,
           ),
           const LinearProgressIndicator(
@@ -39,11 +39,11 @@ topWidget() {
       Column(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: [
-          SizedBox(
+          const SizedBox(
             height: 10,
           ),
-          actionRowColList(Text('Default Method',style: TextStyle(fontSize: 17,fontWeight: FontWeight.w400),),Text('Online Payments',style: TextStyle(color: Colors.grey,fontSize: 15)),Icon(Icons.keyboard_arrow_right,color: Colors.grey,)),
-          actionRowColList(Text('Payment Profile',style: TextStyle(fontSize: 17,fontWeight: FontWeight.w400)),Text('Bank Account',style: TextStyle(color: Colors.grey,fontSize: 15)),Icon(Icons.keyboard_arrow_right,color: Colors.grey,)),
+          actionRowColList(const Text('Default Method',style: TextStyle(fontSize: 17,fontWeight: FontWeight.w400),),const Text('Online Payments',style: TextStyle(color: Colors.grey,fontSize: 15)),const Icon(Icons.keyboard_arrow_right,color: Colors.grey,)),
+          actionRowColList(const Text('Payment Profile',style: TextStyle(fontSize: 17,fontWeight: FontWeight.w400)),const Text('Bank Account',style: TextStyle(color: Colors.grey,fontSize: 15)),const Icon(Icons.keyboard_arrow_right,color: Colors.grey,)),
         ],
       )
       

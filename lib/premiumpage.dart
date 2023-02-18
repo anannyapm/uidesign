@@ -1,8 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/container.dart';
-import 'package:flutter/src/widgets/framework.dart';
 
-import 'package:flutter/material.dart';
 import 'package:uidesign/widgets/customwidgets.dart';
 import 'package:youtube_player_flutter/youtube_player_flutter.dart';
 
@@ -17,9 +14,9 @@ class _DukaanPremiumState extends State<DukaanPremium> {
   static String videoID = 'jLLNd8AlHeU';
 
   // YouTube Video Full URL : https://www.youtube.com/watch?v=dFKhWe2bBkM&feature=emb_title&ab_channel=BBKiVines
-  YoutubePlayerController _controller = YoutubePlayerController(
+  final YoutubePlayerController _controller = YoutubePlayerController(
     initialVideoId: videoID,
-    flags: YoutubePlayerFlags(
+    flags: const YoutubePlayerFlags(
       autoPlay: false,
       mute: false,
     ),
@@ -144,61 +141,67 @@ class _DukaanPremiumState extends State<DukaanPremium> {
                 ),
               ),
             ),
-             ListTile(
-              leading: circularBorder(Icon(
+            ListTile(
+              leading: circularBorder(
+                  const Icon(
                     Icons.language,
                     color: Colors.blue,
                     size: 30,
-                  ), 60),
-    
-              title: Text('Custom domain name'),
-              subtitle: Text(
+                  ),
+                  60),
+              title: const Text('Custom domain name'),
+              subtitle: const Text(
                 'Get your own custom domain and build your brand on the internet',
               ),
             ),
             const SizedBox(
               height: 10,
             ),
-             ListTile(
-              leading: circularBorder(Icon(
+            ListTile(
+              leading: circularBorder(
+                  const Icon(
                     Icons.verified_outlined,
                     color: Colors.blue,
                     size: 30,
-                  ), 60),
-             
-              title: Text('Verified seller badge'),
-              subtitle: Text(
+                  ),
+                  60),
+              title: const Text('Verified seller badge'),
+              subtitle: const Text(
                 'Get green verified badge under your store name and build trust',
               ),
             ),
             const SizedBox(
               height: 10,
             ),
-             ListTile(
-              leading: circularBorder(Icon(
+            ListTile(
+              leading: circularBorder(
+                  const Icon(
                     Icons.laptop_chromebook_rounded,
                     color: Colors.blue,
                     size: 30,
-                  ), 60),
-              title: Text('Dukaan for PC'),
-              subtitle: Text(
+                  ),
+                  60),
+              title: const Text('Dukaan for PC'),
+              subtitle: const Text(
                 'Access all the exclusive premium features on Dukaan for PC',
               ),
             ),
             const SizedBox(
               height: 10,
             ),
-             ListTile(
+            ListTile(
               // ignore: prefer_const_constructors
-              leading: circularBorder(Icon(
+              leading: circularBorder(
+                  const Icon(
                     Icons.headset_mic_outlined,
                     color: Colors.blue,
                     size: 30,
-                  ), 60),
-              title: Text(
+                  ),
+                  60),
+              title: const Text(
                 'Priority support',
               ),
-              subtitle: Text(
+              subtitle: const Text(
                 'Get your questions resolved with our priority customer support',
               ),
             ),
@@ -227,10 +230,10 @@ class _DukaanPremiumState extends State<DukaanPremium> {
                   ),
                   Container(
                     width: double.infinity,
-                    decoration: BoxDecoration(
+                    decoration: const BoxDecoration(
                         borderRadius: BorderRadius.all(Radius.circular(20))),
                     child: YoutubePlayer(
-                      progressColors: ProgressBarColors(
+                      progressColors: const ProgressBarColors(
                         playedColor: Colors.red,
                         handleColor: Colors.red,
                       ),
@@ -245,8 +248,8 @@ class _DukaanPremiumState extends State<DukaanPremium> {
               ),
             ),
             const SizedBox(
-                    height: 10,
-                  ),
+              height: 10,
+            ),
             const Divider(
               thickness: 4,
             ),
@@ -259,12 +262,21 @@ class _DukaanPremiumState extends State<DukaanPremium> {
                 ),
               ),
             ),
-            expansionSectionWidget('What types of businesses can use Dukaan Premium?',"Dukaan caters to a wide variety of sellers.Be it a small grocery store or a big legacy brand - anyone who wants to sell their products/services online Dukaan is the perfect platform for you "),
-            expansionSectionWidget('What is your refund policy?',"Dukaan caters to a wide variety of sellers.Be it a small grocery store or a big legacy brand - anyone who wants to sell their products/services online Dukaan is the perfect platform for you "),
-            expansionSectionWidget('Will there be an automatic charge after the paid trial?',"Dukaan caters to a wide variety of sellers.Be it a small grocery store or a big legacy brand - anyone who wants to sell their products/services online Dukaan is the perfect platform for you "),
-            expansionSectionWidget('Will there be an automatic charge after the paid trial?',"Dukaan caters to a wide variety of sellers.Be it a small grocery store or a big legacy brand - anyone who wants to sell their products/services online Dukaan is the perfect platform for you "),
-            expansionSectionWidget('What happens when my free trial ends?',"Dukaan caters to a wide variety of sellers.Be it a small grocery store or a big legacy brand - anyone who wants to sell their products/services online Dukaan is the perfect platform for you "),
-            expansionSectionWidget('What are the terms for the custom domain?',"Dukaan caters to a wide variety of sellers.Be it a small grocery store or a big legacy brand - anyone who wants to sell their products/services online Dukaan is the perfect platform for you "),
+            expansionSectionWidget(
+                'What types of businesses can use Dukaan Premium?',
+                "Dukaan caters to a wide variety of sellers.Be it a small grocery store or a big legacy brand - anyone who wants to sell their products/services online Dukaan is the perfect platform for you "),
+            expansionSectionWidget('What is your refund policy?',
+                "Dukaan caters to a wide variety of sellers.Be it a small grocery store or a big legacy brand - anyone who wants to sell their products/services online Dukaan is the perfect platform for you "),
+            expansionSectionWidget(
+                'Will there be an automatic charge after the paid trial?',
+                "Dukaan caters to a wide variety of sellers.Be it a small grocery store or a big legacy brand - anyone who wants to sell their products/services online Dukaan is the perfect platform for you "),
+            expansionSectionWidget(
+                'Will there be an automatic charge after the paid trial?',
+                "Dukaan caters to a wide variety of sellers.Be it a small grocery store or a big legacy brand - anyone who wants to sell their products/services online Dukaan is the perfect platform for you "),
+            expansionSectionWidget('What happens when my free trial ends?',
+                "Dukaan caters to a wide variety of sellers.Be it a small grocery store or a big legacy brand - anyone who wants to sell their products/services online Dukaan is the perfect platform for you "),
+            expansionSectionWidget('What are the terms for the custom domain?',
+                "Dukaan caters to a wide variety of sellers.Be it a small grocery store or a big legacy brand - anyone who wants to sell their products/services online Dukaan is the perfect platform for you "),
             const Divider(
               thickness: 4,
               height: 30,

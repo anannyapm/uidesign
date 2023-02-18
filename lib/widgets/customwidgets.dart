@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:uidesign/classes/cardclass.dart';
 
 listWidget(
     {Widget? leadingIcon,
@@ -105,13 +104,13 @@ circularBorder(Widget element, double radius) {
 
 ordersTextHeadingStyle(String head) {
   return Text(head,
-      style: TextStyle(fontSize: 16, fontWeight: FontWeight.w700));
+      style: const TextStyle(fontSize: 16, fontWeight: FontWeight.w700));
 }
 
 ordersTextTitleStyle(String title) {
   return Text(
     title,
-    style: TextStyle(
+    style: const TextStyle(
       fontSize: 16,
       fontWeight: FontWeight.w600,
     ),
@@ -120,7 +119,7 @@ ordersTextTitleStyle(String title) {
 
 ordersSubTextStyle(String subtext) {
   return Text(subtext,
-      style: TextStyle(
+      style: const TextStyle(
         fontSize: 16,
       ));
 }
@@ -160,27 +159,24 @@ productListWidget(
                   children: [
                     Text(
                       productname,
-                      style: TextStyle(
+                      style: const TextStyle(
                         fontSize: 16,
                       ),
                     ),
-                   
-                    Text(
+                    const Text(
                       '1 Piece',
                       style: TextStyle(
                         fontSize: 15,
                       ),
                     ),
-                    
                     Text(
                       price,
-                      style: TextStyle(
+                      style: const TextStyle(
                           fontSize: 15,
                           color: Colors.black,
                           fontWeight: FontWeight.w500),
                     ),
-                   
-                    Text(
+                    const Text(
                       'in stock',
                       style: TextStyle(
                         color: Colors.green,
