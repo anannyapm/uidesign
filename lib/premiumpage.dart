@@ -13,7 +13,7 @@ class DukaanPremium extends StatefulWidget {
 class _DukaanPremiumState extends State<DukaanPremium> {
   static String videoID = 'jLLNd8AlHeU';
 
-  // YouTube Video Full URL : https://www.youtube.com/watch?v=dFKhWe2bBkM&feature=emb_title&ab_channel=BBKiVines
+ 
   final YoutubePlayerController _controller = YoutubePlayerController(
     initialVideoId: videoID,
     flags: const YoutubePlayerFlags(
